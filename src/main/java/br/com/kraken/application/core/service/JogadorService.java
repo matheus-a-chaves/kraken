@@ -3,12 +3,14 @@ package br.com.kraken.application.core.service;
 import br.com.kraken.adapters.in.dto.request.JogadorRequest;
 import br.com.kraken.adapters.in.dto.response.JogadorResponse;
 import br.com.kraken.application.ports.in.service.IJogadorService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class JogadorService implements IJogadorService {
     @Override
-    public JogadorResponse jogadorMock(JogadorRequest jogadorRequest) {
-        String nomeTim = null;
-        if (jogadorRequest.getIdDotIme().equals(824)) {
+    public JogadorResponse jogadorMock(Integer idDotIme) {
+        String nomeTim = "";
+        if (idDotIme.equals(824)) {
             nomeTim = "Kraken";
         }
         return JogadorResponse.builder()

@@ -4,5 +4,5 @@ import br.com.kraken.adapters.in.dto.request.JogadorRequest;
 import br.com.kraken.adapters.in.dto.response.JogadorResponse;
 
 public interface IJogadorService {
-    JogadorResponse jogadorMock(JogadorRequest jogadorRequest);
+    JogadorResponse jogadorMock(Integer idDotime);
 }
